@@ -1,0 +1,96 @@
+body{
+    background-color: rgb(179, 247, 253);
+}
+
+h1{
+    text-align: center;
+}
+
+  /* Style for the table */
+  table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: 50px auto;
+  }
+
+  /* Style for table headers */
+  th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+    background-color: #333;
+    color: white;
+  }
+
+  /* Style for table data cells */
+    td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  /* Style for odd rows */
+  tr:nth-child(odd) {
+    background-color: #a3dcfb;
+  }
+
+  #openModalBtn button{
+    text-align: center;
+    font-size: 1.2rem ;
+    font-weight: bold;
+    font-style: italic;
+    background-color: #ccebfc;
+  }
+
+  #openModalBtn button:hover{
+    background-color: #a3c2fd;
+  }
+
+  #openModalBtn {
+    text-align: center;
+  }
+
+  .delCell{
+    background-color: red;
+    color: white;
+    height: 23px;
+    margin-top: 7px;
+  }
+
+/* Styles for the modal background overlay */
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Styles for the modal content */
+  .modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+  }
+
+  .modal-content>*{
+    padding: 5px;
+  }
+  
+  /* Close button (x) */
+  .close {
+    cursor: pointer;
+    font-size: 24px;
+    align-self: flex-end;
+  }
+  
+  .close:hover {
+    color: red;
+  }
+
+  #read{
+    align-self: flex-start;
+  }
+  
+
