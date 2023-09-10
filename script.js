@@ -15,7 +15,6 @@ function addBookToLibrary(name) {
 }
 addBookToLibrary(harry_potter);
 addBookToLibrary(wrath);
-console.log(myLibrary);
 
 function addRow(book) {
   // Get a reference to the table body
@@ -33,24 +32,8 @@ function addRow(book) {
   pageCell.textContent = book.page;
   const readCell = document.createElement("td");
   readCell.textContent = book.read ? "👍" : "👎";
-  readCell.classList.add('readcell');
+  readCell.classList.add("readcell");
   document.body.appendChild(readCell);
-
-  //toggle read
-  readCell.addEventListener('click', (e)=>{
-    console.log(e.target.textContent);
-    // let x = e.target.textContent;
-    //  e.textContent = x == '👎'?'👍':'👎';
-    if (e.target.textContent == '👍'){
-      e.target.textContent = '👎';
-      book.read = '👎';
-    }
-    else{
-      e.target.textContent = '👍';
-      book.read = '👍';
-    }
-  })
-
 
   //create delete button
   const delCell = document.createElement("button");
@@ -66,6 +49,29 @@ function addRow(book) {
 
   // Append the row to the table body
   tableBody.appendChild(newRow);
+
+  //toggle read
+  readCell.addEventListener("click", (e) => {
+    if (e.target.textContent == "👍") {
+      e.target.textContent = "👎";
+      book.read = "👎";
+    } else {
+      e.target.textContent = "👍";
+      book.read = "👍";
+    }
+  });
+
+  //remove the element
+  // const tbody = document.querySelector("tbody");
+  const remElement = document.querySelectorAll(".delCell");
+  remElement.forEach(function (element) {
+    element.addEventListener("click", (e) => {
+      console.log(e.target.parentNode);
+      if (confirm("you sure you wanna delete it?")) {
+        e.target.parentElement.parentElement.removeChild(e.target.parentElement);
+      }
+    });
+  });
 }
 
 addRow(wrath);
@@ -83,7 +89,7 @@ openModalBtn.addEventListener("click", () => {
   bookName.value = "";
   author.value = "";
   page.value = "";
-  read.checked = "false";//somehow this doesn't work
+  read.checked = "false"; //somehow this doesn't work
 
   dialog.showModal();
 });
@@ -117,5 +123,3 @@ saveBookBtn.addEventListener("click", () => {
   // Close the modal
   dialog.close();
 });
-
-
