@@ -33,6 +33,24 @@ function addRow(book) {
   pageCell.textContent = book.page;
   const readCell = document.createElement("td");
   readCell.textContent = book.read ? "👍" : "👎";
+  readCell.classList.add('readcell');
+  document.body.appendChild(readCell);
+
+  //toggle read
+  readCell.addEventListener('click', (e)=>{
+    console.log(e.target.textContent);
+    // let x = e.target.textContent;
+    //  e.textContent = x == '👎'?'👍':'👎';
+    if (e.target.textContent == '👍'){
+      e.target.textContent = '👎';
+      book.read = '👎';
+    }
+    else{
+      e.target.textContent = '👍';
+      book.read = '👍';
+    }
+  })
+
 
   //create delete button
   const delCell = document.createElement("button");
@@ -100,4 +118,4 @@ saveBookBtn.addEventListener("click", () => {
   dialog.close();
 });
 
-//toggle read
+
