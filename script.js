@@ -62,15 +62,11 @@ function addRow(book) {
   });
 
   //remove the element
-  // const tbody = document.querySelector("tbody");
-  const remElement = document.querySelectorAll(".delCell");
-  remElement.forEach(function (element) {
-    element.addEventListener("click", (e) => {
-      console.log(e.target.parentNode);
-      if (confirm("you sure you wanna delete it?")) {
-        e.target.parentElement.parentElement.removeChild(e.target.parentElement);
-      }
-    });
+  delCell.addEventListener("click", (e) => {
+    console.log(e.target.parentNode);
+    if (confirm("you sure you wanna delete it?")) {
+      e.target.parentElement.parentElement.removeChild(e.target.parentElement);
+    }
   });
 }
 
