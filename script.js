@@ -85,8 +85,6 @@ openModalBtn.addEventListener("click", () => {
   bookName.value = "";
   author.value = "";
   page.value = "";
-  read.checked = "false"; //somehow this doesn't work
-
   dialog.showModal();
 });
 
