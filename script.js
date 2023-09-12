@@ -8,7 +8,7 @@ function Book(author, title, page, read) {
 }
 
 const harry_potter = new Book("JK Rowling", "Harry Potter", 400, true);
-const wrath = new Book("Wrath", "John Gwynne", 350, false);
+const wrath = new Book("John Gwynne", "Wrath", 350, false);
 
 function addBookToLibrary(name) {
   myLibrary.push(name);
