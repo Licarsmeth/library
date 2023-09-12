@@ -85,6 +85,7 @@ openModalBtn.addEventListener("click", () => {
   bookName.value = "";
   author.value = "";
   page.value = "";
+  read.checked = false;
   dialog.showModal();
 });
 
