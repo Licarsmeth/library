@@ -63,8 +63,8 @@ function addRow(book) {
 
   //remove the element
   delCell.addEventListener("click", (e) => {
-    console.log(e.target.parentNode);
     if (confirm("you sure you wanna delete it?")) {
+      //tbody.removeChild(tr)
       e.target.parentElement.parentElement.removeChild(e.target.parentElement);
     }
   });
